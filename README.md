@@ -24,7 +24,7 @@ User saves the updated holiday list to holidayList.JSON
 #### View Holiday List
 User provides a year and week to view matching holidays in the system. The year and week must be valid (Year: 1-9999, Week: 1-53). A Lambda function evaluates if Holiday objects match the desired time frame, and matching Holidays have details presnted to the user. If the selected time frame includes holidays in the next 7 days, the user can request to view simple weather information as well. 
 
-Weather is handled by the OpenWeather API, and fetches weather information from the 7 day forecast for Minneapolis, MN. Location can set by updating the latitude and longitude variables within the getWeather() function. Weather information is stored as a dictionary: {'date': 'weather', ...} and appended to a printed Holiday, if the dates match.
+Weather is handled by the OpenWeather API (https://openweathermap.org/api), and fetches weather information from the 7 day forecast for Minneapolis, MN. Location can set by updating the latitude and longitude variables within the getWeather() function. Weather information is stored as a dictionary: {'date': 'weather', ...} and appended to a printed Holiday, if the dates match.
 
 ## holidays.json
 The given JSON file to include in the Holiday Tracker system. This file is not used by holidayTracker.ipynb. Instead, this file is loaded into a seperate file, webScrape.ipynb, in order to produce a single combined "holidayList.json" file that the main Holiday Tracker system interacts with. 
